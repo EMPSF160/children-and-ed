@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 13px 26px;
+  padding: 13px 24px;
   border-radius: var(--radius-full);
   font-size: 0.95rem;
   font-weight: 600;
@@ -284,8 +284,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
-  flex-shrink: 0;
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -318,8 +318,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-lg {
-  padding: 15px 32px;
-  font-size: 1.05rem;
+  padding: clamp(12px, 2.5vw, 15px) clamp(16px, 3vw, 28px);
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+  white-space: normal;
+  line-height: 1.3;
 }
 
 /* ==========================================================================
