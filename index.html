@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Children & Education Foundation | Transforming Primary Education in Rural India</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Children & Education Foundation brings frugal, scalable smart classroom innovations and toy-based pedagogy to 1.5+ crore children across 1,25,000+ government primary schools in India.">
+  <meta name="keywords" content="NGO, Education NGO, Primary Education, Smart Shala, Rural Schools, Frugal Innovation, Smart Classroom, Indian NGOs, 80G Tax Exemption">
+  <meta property="og:title" content="Children & Education Foundation | Leading Education NGO in India">
+  <meta property="og:description" content="Transforming classroom learning outcomes in Math and English for rural primary school children at under ₹100 per child per year.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+  <!-- Google Fonts & External Libraries CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Core App Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Announcement Top Bar
+       ======================================================================== -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="announcement-tag">Impacting 1.5 Cr+ Children</span>
+        <span class="tax-badge"><i class="fa-solid fa-shield-halved"></i> 100% Tax Exemption under Sec 80G</span>
+      </div>
+      <div class="announcement-right">
+        <a href="#reach" class="announcement-link"><i class="fa-solid fa-location-dot"></i> Active in 8 States</a>
+        <a href="#calculator" class="announcement-link"><i class="fa-solid fa-hand-holding-heart"></i> Sponsor a Classroom</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. Sticky Header Navigation
+       ======================================================================== -->
+  <header class="header-wrapper">
+    <div class="header">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="#" class="brand-logo" id="main-brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Children & Education</span>
+            <span class="brand-subtitle">Foundation India</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" id="primary-nav-menu">
+          <div class="nav-item active">
+            <a href="#" class="nav-link">Home</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="#about" class="nav-link">About Us <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <div class="dropdown-menu">
+              <a href="#about" class="dropdown-item">
+                <div class="dropdown-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div>
+                  <strong>Our Philosophy</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">Frugal Innovation Model</div>
+                </div>
+              </a>
+              <a href="#pedagogy" class="dropdown-item">
+                <div class="dropdown-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                <div>
+                  <strong>Sahi Kram Pedagogy</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">Toy-based learning system</div>
+                </div>
+              </a>
+              <a href="#partners" class="dropdown-item">
+                <div class="dropdown-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <strong>Govt Partnerships</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">State MoUs & CSR Alliances</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="#innovations" class="nav-link">Our Innovations</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="#reach" class="nav-link">Our State Partners</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="#outcomes" class="nav-link">Data & Outcomes</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="#stories" class="nav-link">Stories of Change</a>
+          </div>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="nav-actions">
+          <a href="#calculator" class="btn btn-primary btn-sm" id="header-donate-btn">
+            <i class="fa-solid fa-heart"></i> Donate Now
+          </a>
+          <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay & Panel (<=1024px) -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <div class="mobile-drawer-content" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon-box" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 0.95rem;">Children & Education</span>
+          <span class="brand-subtitle" style="font-size: 0.65rem;">Foundation India</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-drawer-nav">
+      <a href="#" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      <a href="#about"><i class="fa-solid fa-lightbulb"></i> <span>About Our Mission</span></a>
+      <div class="mobile-drawer-sublinks" style="padding-left: 20px; display: flex; flex-direction: column; gap: 4px; margin-bottom: 6px;">
+        <a href="#about" style="font-size: 0.85rem; color: #64748B; padding: 6px 12px;"><i class="fa-solid fa-angle-right" style="font-size: 0.7rem;"></i> Frugal Innovation</a>
+        <a href="#pedagogy" style="font-size: 0.85rem; color: #64748B; padding: 6px 12px;"><i class="fa-solid fa-angle-right" style="font-size: 0.7rem;"></i> Sahi Kram Pedagogy</a>
+        <a href="#reach" style="font-size: 0.85rem; color: #64748B; padding: 6px 12px;"><i class="fa-solid fa-angle-right" style="font-size: 0.7rem;"></i> Govt Partnerships</a>
+      </div>
+      <a href="#innovations"><i class="fa-solid fa-graduation-cap"></i> <span>Our Flagship Programs</span></a>
+      <a href="#pedagogy"><i class="fa-solid fa-cube"></i> <span>360° Smart Classroom</span></a>
+      <a href="#reach"><i class="fa-solid fa-map-location-dot"></i> <span>Our State Partners</span></a>
+      <a href="#outcomes"><i class="fa-solid fa-chart-pie"></i> <span>Data & Outcomes</span></a>
+      <a href="#stories"><i class="fa-solid fa-heart"></i> <span>Stories of Change</span></a>
+    </nav>
+
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid #E2E8F0; display: flex; flex-direction: column; gap: 12px;">
+      <a href="#calculator" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        <i class="fa-solid fa-heart"></i> Donate / Sponsor Now
+      </a>
+      <div style="text-align: center; font-size: 0.75rem; color: #64748B;">
+        <i class="fa-solid fa-shield-halved" style="color: #059669;"></i> 80G Tax Exemption Certified
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         3. Hero Section (Three.js 3D Canvas + Ambient Video Background)
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Background Video Loop -->
+      <div class="hero-bg-video-wrapper">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+          <source src="videos/52886-471089084_medium.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Gradient Overlay -->
+      <div class="hero-overlay-gradient"></div>
+
+      <!-- Interactive Three.js Particle Mesh -->
+      <canvas id="three-hero-canvas"></canvas>
+
+      <div class="container hero-content-wrapper">
+        <div class="hero-grid">
+          <!-- Hero Left Content -->
+          <div class="hero-text-col">
+            <div class="hero-tag">
+              <span class="pulse-dot"></span>
+              <span>Transforming Primary Education at Scale</span>
+            </div>
+
+            <h1 class="hero-title">
+              Igniting the Joy of Learning in <span class="highlight-gradient">1.5 Crore+</span> Rural Children.
+            </h1>
+
+            <p class="hero-desc">
+              We partner with state governments to revolutionize primary school learning through frugal smart classroom kits, toy-based pedagogy, and offline audio-visual learning for under ₹100/child/year.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#innovations" class="btn btn-primary btn-lg" id="hero-explore-btn">
+                <span>Explore Smart Shala</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <button class="video-play-btn" data-video-src="videos/215475_medium.mp4" id="hero-video-trigger" aria-label="Watch Impact Film">
+                <span class="play-circle"><i class="fa-solid fa-play"></i></span>
+                <span>Watch Impact Film (2 Min)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Right Video Player Showcase -->
+          <div class="hero-right-col">
+            <div class="hero-video-player-card">
+              <div class="hero-main-video-box">
+                <div class="hero-video-badge-overlay">
+                  <span class="pulse-dot"></span>
+                  <span id="heroVideoTitleBadge">Smart Shala in Action</span>
+                </div>
+                
+                <video id="heroMainVideoPlayer" autoplay muted loop playsinline>
+                  <source src="videos/52886-471089084_medium.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-video-controls-overlay">
+                  <button class="hero-vid-control-btn" id="heroMuteToggleBtn" title="Toggle Sound" aria-label="Toggle Sound">
+                    <i class="fa-solid fa-volume-xmark" id="heroMuteIcon"></i>
+                  </button>
+                  <button class="hero-vid-control-btn" id="heroPlayPauseBtn" title="Play / Pause" aria-label="Play / Pause">
+                    <i class="fa-solid fa-pause" id="heroPlayIcon"></i>
+                  </button>
+                  <button class="hero-vid-control-btn" id="heroFullscreenBtn" title="Expand Fullscreen" aria-label="Expand Fullscreen">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Hero Video Playlist Switcher -->
+              <div class="hero-video-playlist-bar">
+                <div class="hero-playlist-thumb active" data-hero-video="videos/52886-471089084_medium.mp4" data-title="Smart Shala in Action">
+                  <i class="fa-solid fa-play"></i>
+                  <span>Classroom Live</span>
+                </div>
+                <div class="hero-playlist-thumb" data-hero-video="videos/52888-471156118_medium.mp4" data-title="English with Audio Mascot">
+                  <i class="fa-solid fa-volume-high"></i>
+                  <span>Audio Didi</span>
+                </div>
+                <div class="hero-playlist-thumb" data-hero-video="videos/52890-471156119_medium.mp4" data-title="Toy-Based Math Learning">
+                  <i class="fa-solid fa-shapes"></i>
+                  <span>Math Toys</span>
+                </div>
+                <div class="hero-playlist-thumb" data-hero-video="videos/215475_medium.mp4" data-title="Teacher Enablement">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>Teacher Impact</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Live Impact Statistics Ribbon
+         ======================================================================== -->
+    <div class="container impact-stats-bar" id="stats">
+      <div class="stats-card-container">
+        <!-- Stat 1 -->
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-children"></i></div>
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="15" data-decimal="true">0</span>
+            <span class="stat-suffix">Cr+</span>
+          </div>
+          <span class="stat-label">Children Impacted Across India</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="125000">0</span>
+            <span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Govt Primary Schools Equipped</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-suffix">States</span>
+          </div>
+          <span class="stat-label">Active State Govt MoUs</span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="350000">0</span>
+            <span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Teachers Trained & Supported</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         5. Philosophy & About Section (Frugal Innovation)
+         ======================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Visual Left -->
+          <div class="about-visuals fade-up-element">
+            <div class="about-main-img-wrap">
+              <img src="image/child (1).jpg" alt="Rural Children Smiling in Classroom" class="about-main-img">
+            </div>
+            <div class="about-floating-card">
+              <div class="afc-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="afc-text">
+                <strong>Under ₹100</strong>
+                <span>Annual cost per child to double learning outcomes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Content Right -->
+          <div class="about-content fade-up-element">
+            <div class="badge-tag blue"><i class="fa-solid fa-seedling"></i> Frugal Innovation Philosophy</div>
+            <h2 class="section-title">Large-Scale Impact Through Low-Cost, Internet-Free Technology.</h2>
+            <p class="section-subtitle" style="margin-left: 0; margin-bottom: 24px;">
+              Rural classrooms in India face real constraints: sporadic electricity, lack of high-speed internet, and multi-grade teaching environments. Our innovations are built specifically for the realities of rural government schools.
+            </p>
+
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-wifi-slash"></i></div>
+                <h4>Zero Internet Dependency</h4>
+                <p>Plug-and-play offline hardware works seamlessly even in the most remote tribal villages.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <h4>Toy-Based Pedagogy</h4>
+                <p>Concrete to abstract learning with physical board games, counting rods, and flashcards.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <h4>Teacher-Centric Design</h4>
+                <p>Empowers existing government teachers rather than replacing them with machines.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h4>Frugal Scalability</h4>
+                <p>Designed to be 10x more affordable than conventional digital classroom setups.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Flagship Innovations & Smart Shala Ecosystem (Swiper Slider)
+         ======================================================================== -->
+    <!-- ========================================================================
+         6. Flagship Programs (Signature Gradient Cards)
+         ======================================================================== -->
+    <section class="section section-alt" id="innovations">
+      <div class="container">
+        <div class="innovations-header fade-up-element">
+          <div class="badge-tag"><i class="fa-solid fa-graduation-cap"></i> Core Interventions</div>
+          <h2 class="section-title">Our Flagship Programs</h2>
+          <p class="section-subtitle">
+            Designed to bring joyful, intuitive, and measurable learning to government primary school classrooms across India.
+          </p>
+        </div>
+
+        <div class="program-banners-container">
+          <!-- 1. Digital Classroom / Smart TV Program -->
+          <div class="program-banner-card program-theme-coral fade-up-element">
+            <div class="program-card-content">
+              <h3 class="program-card-title">Digital Classroom Program</h3>
+              <p class="program-card-desc">
+                Transforms standard classroom televisions into interactive teaching hubs without requiring internet connectivity. With 800+ animated video lessons, voice-assisted rhymes, and gamified quizzes in regional languages, it ensures every child experiences world-class digital learning even in the most remote villages.
+              </p>
+            </div>
+            <div class="program-card-visual">
+              <img src="image/child (14).jpg" alt="Digital Classroom Program" class="program-card-img">
+            </div>
+          </div>
+
+          <!-- 2. English Program (Golden Yellow Gradient) -->
+          <div class="program-banner-card program-theme-yellow fade-up-element">
+            <div class="program-card-content">
+              <h3 class="program-card-title">English Program</h3>
+              <p class="program-card-desc">
+                Our English Program strengthens language learning in primary education using the LSRW approach. With bilingual lessons, interactive songs, engaging worksheets, and gamified assessments, it turns English into a joyful subject. By equipping teachers with simple, ready-to-use tools, the program helps children in Classes 1–5 to build a strong foundation for lifelong learning.
+              </p>
+            </div>
+            <div class="program-card-visual">
+              <img src="image/child (16).jpg" alt="English Program with Audio Mascot" class="program-card-img">
+            </div>
+          </div>
+
+          <!-- 3. Math Program (Soft Aquamarine / Mint Gradient) -->
+          <div class="program-banner-card program-theme-mint fade-up-element">
+            <div class="program-card-content">
+              <h3 class="program-card-title">Math Program</h3>
+              <p class="program-card-desc">
+                Our Math Program makes mathematics fun and easy to understand in primary classes. Using hands-on teaching kits, board games, activities, and interactive worksheets, it helps children in Classes 1–5 build strong numeracy skills step by step. With structured lesson plans and joyful classroom experiences, the program empowers teachers to explain concepts clearly and ensures every child develops confidence in solving math problems.
+              </p>
+            </div>
+            <div class="program-card-visual">
+              <img src="image/child (10).jpg" alt="Math Program Hands-on Learning" class="program-card-img">
+            </div>
+          </div>
+
+          <!-- 4. Science Program (Deep Emerald Green Gradient) -->
+          <div class="program-banner-card program-theme-emerald fade-up-element">
+            <div class="program-card-content">
+              <h3 class="program-card-title">Science Program</h3>
+              <p class="program-card-desc">
+                Our Science Program ignites natural curiosity and scientific temperament through experiential learning. With hands-on experiments, interactive 3D models, inquiry-based question sets, and real-world observations, it empowers young learners to explore foundational physics, ecology, and life science concepts with enthusiasm and deep understanding.
+              </p>
+            </div>
+            <div class="program-card-visual">
+              <img src="image/child (6).jpg" alt="Science Program Experiential Learning" class="program-card-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. 360° Smart Shala Classroom Experience (Interactive Sandbox)
+         ======================================================================== -->
+    <section class="section sandbox-section" id="pedagogy">
+      <div class="container">
+        <div style="text-align: center; max-width: 740px; margin: 0 auto 40px;" class="fade-up-element">
+          <div class="badge-tag blue"><i class="fa-solid fa-cube"></i> Inside The Classroom</div>
+          <h2 class="section-title">The 360° Smart Shala Experience</h2>
+          <p class="section-subtitle">
+            Explore how our 4 integrated classroom tools work together seamlessly to empower teachers and accelerate learning outcomes.
+          </p>
+        </div>
+
+        <!-- Interactive Sandbox Tab Selector -->
+        <div class="sandbox-tabs-nav fade-up-element">
+          <button class="sandbox-tab-btn active" data-sandbox-tab="panel-toys">
+            <i class="fa-solid fa-shapes"></i>
+            <span>3D Tangible Kits</span>
+          </button>
+          <button class="sandbox-tab-btn" data-sandbox-tab="panel-tv">
+            <i class="fa-solid fa-tv"></i>
+            <span>Offline Smart TV</span>
+          </button>
+          <button class="sandbox-tab-btn" data-sandbox-tab="panel-audio">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>Audio Mascot Didi</span>
+          </button>
+          <button class="sandbox-tab-btn" data-sandbox-tab="panel-teacher">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Teacher Enablement</span>
+          </button>
+        </div>
+
+        <!-- Interactive Showcase Card -->
+        <div class="sandbox-showcase-card fade-up-element">
+          <!-- Panel 1: Tangible Kits -->
+          <div class="sandbox-panel active" id="panel-toys">
+            <div class="sandbox-content-col">
+              <span class="sandbox-step-tag">INNOVATION 01 / 04</span>
+              <h3 class="sandbox-title">100+ Manipulative 3D STEM & Math Learning Toys</h3>
+              <p class="sandbox-desc">
+                Converts abstract formulas into tangible physical reality. Children build numbers using place-value beads, solve fraction puzzles with tactile discs, and explore 3D geometric nets before ever touching a textbook.
+              </p>
+              
+              <div class="sandbox-features-list">
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> 100% NCERT Board Mapped</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Zero Electricity Required</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Group Peer Learning</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Multi-Grade Adaptable</div>
+              </div>
+
+              <button class="btn btn-primary btn-sm" data-video-src="videos/52890-471156119_medium.mp4">
+                <i class="fa-solid fa-play"></i> Watch Toys in Action
+              </button>
+            </div>
+            
+            <div class="sandbox-visual-col">
+              <img src="image/child (12).jpg" alt="Tangible Math Kits" class="sandbox-visual-img">
+              <div class="sandbox-floating-metric">
+                <i class="fa-solid fa-puzzle-piece" style="font-size: 1.8rem; color: #F59E0B;"></i>
+                <div>
+                  <strong>100+ Toys</strong>
+                  <span>In Every Smart Box</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Offline Smart TV -->
+          <div class="sandbox-panel" id="panel-tv">
+            <div class="sandbox-content-col">
+              <span class="sandbox-step-tag">INNOVATION 02 / 04</span>
+              <h3 class="sandbox-title">Plug & Play Offline Smart Classroom TV</h3>
+              <p class="sandbox-desc">
+                Transforms ordinary televisions into smart, interactive digital boards without needing internet or Wi-Fi connectivity. Preloaded with 800+ animated video episodes, stories, and quizzes in local state dialects.
+              </p>
+              
+              <div class="sandbox-features-list">
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Zero Internet Dependency</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> 800+ Animated Lessons</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> 6 Regional Languages</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Instant Plug-in Device</div>
+              </div>
+
+              <button class="btn btn-primary btn-sm" data-video-src="videos/52886-471089084_medium.mp4">
+                <i class="fa-solid fa-play"></i> Watch TV Lesson Demo
+              </button>
+            </div>
+            
+            <div class="sandbox-visual-col">
+              <img src="image/child (14).jpg" alt="Smart Classroom TV" class="sandbox-visual-img">
+              <div class="sandbox-floating-metric">
+                <i class="fa-solid fa-tv" style="font-size: 1.8rem; color: #38BDF8;"></i>
+                <div>
+                  <strong>800+ Lessons</strong>
+                  <span>100% Offline Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Audio Mascot Didi -->
+          <div class="sandbox-panel" id="panel-audio">
+            <div class="sandbox-content-col">
+              <span class="sandbox-step-tag">INNOVATION 03 / 04</span>
+              <h3 class="sandbox-title">Audio Companion Box & Smart Mentor Didi</h3>
+              <p class="sandbox-desc">
+                A cheerful, conversational audio mascot that teaches English phonics, vocabulary, and daily dialogues through music and storytelling. Removes the hesitation of first-generation English learners in rural schools.
+              </p>
+              
+              <div class="sandbox-features-list">
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> LSRW Fluency Method</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> 120+ Interactive Songs</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Bilingual Vocabulary</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> High-Decibel Rural Audio</div>
+              </div>
+
+              <button class="btn btn-primary btn-sm" data-video-src="videos/52888-471156118_medium.mp4">
+                <i class="fa-solid fa-play"></i> Listen to Audio Didi
+              </button>
+            </div>
+            
+            <div class="sandbox-visual-col">
+              <img src="image/child (16).jpg" alt="Audio Mascot Learning" class="sandbox-visual-img">
+              <div class="sandbox-floating-metric">
+                <i class="fa-solid fa-microphone-lines" style="font-size: 1.8rem; color: #EC4899;"></i>
+                <div>
+                  <strong>2.8x Faster</strong>
+                  <span>English Speaking Fluency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Teacher Enablement -->
+          <div class="sandbox-panel" id="panel-teacher">
+            <div class="sandbox-content-col">
+              <span class="sandbox-step-tag">INNOVATION 04 / 04</span>
+              <h3 class="sandbox-title">Teacher Capacity Building & Smart App</h3>
+              <p class="sandbox-desc">
+                Empowering government teachers with 500,000+ ready-to-use lesson plans, micro-learning modules, and peer community support. Teachers spend less time prepping and more time mentoring individual students.
+              </p>
+              
+              <div class="sandbox-features-list">
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> 3,50,000+ Teachers Trained</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Free Mobile App</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Govt Recognized Certificates</div>
+                <div class="sandbox-feature-bullet"><i class="fa-solid fa-circle-check"></i> Day-wise Lesson Flow</div>
+              </div>
+
+              <button class="btn btn-primary btn-sm" data-video-src="videos/215475_medium.mp4">
+                <i class="fa-solid fa-play"></i> Watch Teacher Stories
+              </button>
+            </div>
+            
+            <div class="sandbox-visual-col">
+              <img src="image/child (10).jpg" alt="Teacher Mentorship" class="sandbox-visual-img">
+              <div class="sandbox-floating-metric">
+                <i class="fa-solid fa-chalkboard-user" style="font-size: 1.8rem; color: #10B981;"></i>
+                <div>
+                  <strong>3.5 Lakh+</strong>
+                  <span>Empowered Teachers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Interactive Geographic Reach Map (Leaflet.js)
+         ======================================================================== -->
+    <!-- ========================================================================
+         8. Our State Partners
+         ======================================================================== -->
+    <section class="section state-partners-section" id="reach">
+      <div class="container">
+        <div class="state-partners-grid">
+          <!-- Left Column: Content & Metrics -->
+          <div class="state-partners-left fade-up-element">
+            <h2 class="section-title" style="font-size: clamp(2.4rem, 4vw, 3.6rem); margin-bottom: 0;">Our State Partners</h2>
+            <div class="state-partners-header-tag">
+              TOGETHER WITH STATES <span>TRANSFORMING CLASSROOMS, EMPOWERING EVERY CHILD</span>
+            </div>
+
+            <!-- State Government Emblems Row -->
+            <div class="state-emblems-row">
+              <!-- Haryana Emblem -->
+              <div class="state-emblem-badge" title="Govt of Haryana">
+                <svg viewBox="0 0 100 100" fill="#DC2626"><circle cx="50" cy="50" r="45" fill="none" stroke="#DC2626" stroke-width="4"/><circle cx="50" cy="50" r="38" fill="none" stroke="#DC2626" stroke-dasharray="4,2"/><text x="50" y="56" font-size="28" font-family="serif" text-anchor="middle" fill="#DC2626">HR</text></svg>
+              </div>
+              <!-- Rajasthan Emblem -->
+              <div class="state-emblem-badge" title="Govt of Rajasthan">
+                <svg viewBox="0 0 100 100" fill="#1E293B"><circle cx="50" cy="50" r="45" fill="none" stroke="#1E293B" stroke-width="4"/><path d="M50 25 L65 75 L35 75 Z" fill="#1E293B"/><text x="50" y="90" font-size="12" font-weight="bold" text-anchor="middle" fill="#1E293B">RAJ</text></svg>
+              </div>
+              <!-- Uttar Pradesh Emblem -->
+              <div class="state-emblem-badge" title="Govt of Uttar Pradesh">
+                <svg viewBox="0 0 100 100" fill="#059669"><circle cx="50" cy="50" r="45" fill="none" stroke="#059669" stroke-width="4"/><circle cx="50" cy="50" r="36" fill="none" stroke="#059669" stroke-width="2"/><text x="50" y="56" font-size="26" font-weight="bold" font-family="sans-serif" text-anchor="middle" fill="#059669">UP</text></svg>
+              </div>
+              <!-- Chhattisgarh Emblem -->
+              <div class="state-emblem-badge" title="Govt of Chhattisgarh">
+                <svg viewBox="0 0 100 100" fill="#F59E0B"><circle cx="50" cy="50" r="45" fill="none" stroke="#F59E0B" stroke-width="4"/><polygon points="50,15 62,38 88,40 68,58 74,84 50,70 26,84 32,58 12,40 38,38" fill="#F59E0B"/><circle cx="50" cy="50" r="14" fill="#FFFFFF"/></svg>
+              </div>
+              <!-- Uttarakhand Emblem -->
+              <div class="state-emblem-badge" title="Govt of Uttarakhand">
+                <svg viewBox="0 0 100 100" fill="#2563EB"><circle cx="50" cy="50" r="45" fill="none" stroke="#2563EB" stroke-width="4"/><path d="M25 65 Q50 30 75 65" stroke="#2563EB" stroke-width="6" fill="none"/><text x="50" y="80" font-size="16" font-weight="bold" text-anchor="middle" fill="#2563EB">UK</text></svg>
+              </div>
+              <!-- Himachal Pradesh Emblem -->
+              <div class="state-emblem-badge" title="Govt of Himachal Pradesh">
+                <svg viewBox="0 0 100 100" fill="#0D9488"><circle cx="50" cy="50" r="45" fill="none" stroke="#0D9488" stroke-width="4"/><path d="M20 70 L50 25 L80 70 Z" fill="#0D9488"/><text x="50" y="88" font-size="14" font-weight="bold" text-anchor="middle" fill="#0D9488">HP</text></svg>
+              </div>
+            </div>
+
+            <!-- Partner Now Button -->
+            <a href="#calculator" class="partner-now-btn">
+              <span>Partner Now</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- Big Orange Playful Impact Metrics -->
+            <div class="partner-metrics-list">
+              <div class="partner-metric-block">
+                <div class="partner-metric-title">8 STATES</div>
+                <p class="partner-metric-desc">
+                  Partnering with state governments to bring innovative classroom solutions to schools across India.
+                </p>
+              </div>
+
+              <div class="partner-metric-block">
+                <div class="partner-metric-title">1.4 LAKH SCHOOLS</div>
+                <p class="partner-metric-desc">
+                  Making learning joyful and accessible in classrooms nationwide.
+                </p>
+              </div>
+
+              <div class="partner-metric-block">
+                <div class="partner-metric-title">1.5 CRORE CHILDREN</div>
+                <p class="partner-metric-desc">
+                  Building strong foundational literacy and numeracy skills for lifelong learning.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stylized India Map with Highlighted Partner States -->
+          <div class="state-map-showcase fade-up-element">
+            <div class="state-map-svg-wrap">
+              <svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+                <!-- Base India Map Outline -->
+                <!-- Kashmir & North -->
+                <path class="map-state-path active-partner-light" d="M240,40 Q280,30 310,70 Q340,110 320,150 Q280,160 250,140 Q220,110 240,40 Z" data-state="Himachal Pradesh / North"></path>
+                <!-- Himachal Pradesh -->
+                <path class="map-state-path active-partner" d="M270,120 Q310,125 315,155 Q290,175 270,165 Q255,145 270,120 Z" data-state="Himachal Pradesh: 9,600+ Schools"></path>
+                <!-- Punjab & Haryana -->
+                <path class="map-state-path active-partner-light" d="M220,135 Q260,135 265,175 Q240,195 210,185 Q200,155 220,135 Z" data-state="Haryana: 14,200+ Schools"></path>
+                <!-- Uttarakhand -->
+                <path class="map-state-path active-partner" d="M305,155 Q340,165 345,195 Q320,215 295,200 Q295,175 305,155 Z" data-state="Uttarakhand: 11,400+ Schools"></path>
+                <!-- Rajasthan -->
+                <path class="map-state-path active-partner-light" d="M140,185 Q220,180 230,265 Q180,310 130,285 Q110,230 140,185 Z" data-state="Rajasthan: 32,500+ Schools"></path>
+                <!-- Uttar Pradesh (Big Orange State) -->
+                <path class="map-state-path active-partner" d="M255,185 Q360,190 395,275 Q320,320 280,310 Q240,280 255,185 Z" data-state="Uttar Pradesh: 45,000+ Schools"></path>
+                <!-- Gujarat -->
+                <path class="map-state-path" d="M80,270 Q145,265 145,340 Q100,375 75,340 Q65,295 80,270 Z" data-state="Gujarat"></path>
+                <!-- Madhya Pradesh -->
+                <path class="map-state-path" d="M190,285 Q310,290 330,375 Q260,405 190,380 Q170,330 190,285 Z" data-state="Madhya Pradesh"></path>
+                <!-- Bihar & Jharkhand -->
+                <path class="map-state-path active-partner" d="M390,265 Q465,270 475,340 Q415,370 380,345 Q375,295 390,265 Z" data-state="Jharkhand: 18,300+ Schools"></path>
+                <!-- Chhattisgarh & Odisha (Orange Highlighted Belt) -->
+                <path class="map-state-path active-partner" d="M315,345 Q375,355 385,465 Q335,510 300,470 Q290,405 315,345 Z" data-state="Chhattisgarh: 21,800+ Schools"></path>
+                <!-- Maharashtra -->
+                <path class="map-state-path" d="M140,365 Q245,370 255,475 Q180,505 135,460 Q120,405 140,365 Z" data-state="Maharashtra: 16,700+ Schools"></path>
+                <!-- Andhra & Telangana -->
+                <path class="map-state-path" d="M245,465 Q330,475 320,580 Q250,600 230,550 Q225,500 245,465 Z" data-state="Andhra Pradesh & Telangana"></path>
+                <!-- Karnataka & Kerala -->
+                <path class="map-state-path" d="M180,495 Q240,505 230,640 Q175,645 160,575 Q165,525 180,495 Z" data-state="Karnataka & Southern Region"></path>
+                <!-- Tamil Nadu -->
+                <path class="map-state-path" d="M230,575 Q285,580 270,680 Q225,685 220,630 Q215,595 230,575 Z" data-state="Tamil Nadu"></path>
+                <!-- North East Region -->
+                <path class="map-state-path" d="M470,230 Q565,225 570,305 Q515,340 475,310 Q460,265 470,230 Z" data-state="North East Region"></path>
+              </svg>
+
+              <!-- State Tooltip on Map -->
+              <div class="map-state-tooltip" id="mapStateTooltip">
+                <h5 id="mapTooltipTitle">Uttar Pradesh</h5>
+                <p id="mapTooltipDesc">45,000+ Schools | 58,00,000+ Children reached through Smart Shala.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. Data-Driven Impact Visualizations (Chart.js)
+         ======================================================================== -->
+    <section class="section section-alt" id="outcomes">
+      <div class="container">
+        <div class="innovations-header fade-up-element">
+          <div class="badge-tag green"><i class="fa-solid fa-chart-pie"></i> Verified Learning Outcomes</div>
+          <h2 class="section-title">Measurable, Third-Party Validated Impact</h2>
+          <p class="section-subtitle">
+            Our data-backed intervention tracks foundational numeracy and literacy (FLN) performance before and after Smart Shala adoption.
+          </p>
+        </div>
+
+        <div class="impact-charts-wrapper">
+          <!-- Chart 1: Baseline vs Endline Learning Mastery -->
+          <div class="chart-card fade-up-element">
+            <div class="chart-header">
+              <div>
+                <h3 style="font-size: 1.15rem; color: var(--dark);">Competency Mastery Growth</h3>
+                <span style="font-size: 0.8rem; color: #64748B;">Baseline (Before) vs Endline (Smart Shala)</span>
+              </div>
+              <div class="chart-toggle-group">
+                <button class="chart-toggle-btn active" data-chart-filter="all">All</button>
+                <button class="chart-toggle-btn" data-chart-filter="math">Math</button>
+                <button class="chart-toggle-btn" data-chart-filter="english">English</button>
+              </div>
+            </div>
+            <div class="chart-canvas-box">
+              <canvas id="learningOutcomeChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 2: 5-Year Scale Trajectory -->
+          <div class="chart-card fade-up-element">
+            <div class="chart-header">
+              <div>
+                <h3 style="font-size: 1.15rem; color: var(--dark);">5-Year Scale & Expansion</h3>
+                <span style="font-size: 0.8rem; color: #64748B;">Children enrolled vs Schools equipped</span>
+              </div>
+              <span class="badge-tag blue" style="margin-bottom: 0; padding: 4px 10px; font-size: 0.75rem;">Year-on-Year Growth</span>
+            </div>
+            <div class="chart-canvas-box">
+              <canvas id="growthTrajectoryChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. Stories of Transformation & Video Gallery
+         ======================================================================== -->
+    <section class="section" id="stories">
+      <div class="container">
+        <div class="innovations-header fade-up-element">
+          <div class="badge-tag"><i class="fa-solid fa-heart-pulse"></i> Ground Reality</div>
+          <h2 class="section-title">Stories of Transformation</h2>
+          <p class="section-subtitle">
+            Hear directly from the teachers, students, and district leaders whose classrooms have been invigorated by Smart Shala.
+          </p>
+        </div>
+
+        <div class="swiper stories-swiper">
+          <div class="swiper-wrapper">
+            <!-- Story 1 -->
+            <div class="swiper-slide">
+              <div class="story-card" data-video-src="videos/52888-471156118_medium.mp4">
+                <img src="image/child (2).jpg" alt="Smiles in classroom" class="story-img">
+                <div class="story-gradient-overlay">
+                  <div class="story-play-icon"><i class="fa-solid fa-play"></i></div>
+                  <h4>"Math Was Once Feared, Now It's Favorite"</h4>
+                  <div class="story-location"><i class="fa-solid fa-location-dot"></i> Primary School, Mewat, Haryana</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="swiper-slide">
+              <div class="story-card" data-video-src="videos/52890-471156119_medium.mp4">
+                <img src="image/child (4).jpg" alt="Child with educational board" class="story-img">
+                <div class="story-gradient-overlay">
+                  <div class="story-play-icon"><i class="fa-solid fa-play"></i></div>
+                  <h4>From 20% Attendance to 95% Daily Joy</h4>
+                  <div class="story-location"><i class="fa-solid fa-location-dot"></i> Govt Model School, Alwar, Rajasthan</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 3 -->
+            <div class="swiper-slide">
+              <div class="story-card" data-video-src="videos/86242-591841114_medium.mp4">
+                <img src="image/child (10).jpg" alt="Teacher explaining with kits" class="story-img">
+                <div class="story-gradient-overlay">
+                  <div class="story-play-icon"><i class="fa-solid fa-play"></i></div>
+                  <h4>Teacher Sunita's Classroom Revolution</h4>
+                  <div class="story-location"><i class="fa-solid fa-location-dot"></i> District Varanasi, Uttar Pradesh</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 4 -->
+            <div class="swiper-slide">
+              <div class="story-card" data-video-src="videos/1028-142624363_medium.mp4">
+                <img src="image/child (8).jpg" alt="Children learning with joy" class="story-img">
+                <div class="story-gradient-overlay">
+                  <div class="story-play-icon"><i class="fa-solid fa-play"></i></div>
+                  <h4>Empowering First-Generation Learners</h4>
+                  <div class="story-location"><i class="fa-solid fa-location-dot"></i> Tribal Belt, Bastar, Chhattisgarh</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-controls">
+          <button class="swiper-nav-btn stories-prev" aria-label="Previous Story"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="swiper-pagination stories-pagination" style="position: static; width: auto;"></div>
+          <button class="swiper-nav-btn stories-next" aria-label="Next Story"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. Interactive Classroom Sponsorship & Donation Calculator
+         ======================================================================== -->
+    <section class="section donation-section" id="calculator">
+      <div class="container">
+        <div class="donation-grid">
+          <!-- Left Text Content -->
+          <div class="donation-left fade-up-element">
+            <div class="badge-tag" style="background: rgba(255, 107, 0, 0.2); color: #FF9E54;">
+              <i class="fa-solid fa-hand-holding-dollar"></i> Direct Impact
+            </div>
+            <h2 class="section-title" style="color: #FFFFFF;">Sponsor a Rural Smart Classroom Today.</h2>
+            <p style="color: #CBD5E1; font-size: 1.15rem; line-height: 1.7; margin-bottom: 28px;">
+              Your contribution equips a rural government primary school with full offline Smart TV hardware, 100+ tangible STEM kits, and 1 year of continuous teacher mentorship.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px;">
+              <div style="display: flex; align-items: center; gap: 12px; color: #E2E8F0;">
+                <i class="fa-solid fa-circle-check" style="color: #34D399; font-size: 1.2rem;"></i>
+                <span>100% Tax Deductible under Section 80G of Indian IT Act</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; color: #E2E8F0;">
+                <i class="fa-solid fa-circle-check" style="color: #34D399; font-size: 1.2rem;"></i>
+                <span>Receive personalized progress reports and school geo-tag</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; color: #E2E8F0;">
+                <i class="fa-solid fa-circle-check" style="color: #34D399; font-size: 1.2rem;"></i>
+                <span>Transparent utilization with GuideStar Platinum Governance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Calculator Card -->
+          <div class="donation-calculator-box fade-up-element">
+            <h3 style="font-size: 1.3rem; color: #FFFFFF; margin-bottom: 8px;">Interactive Impact Calculator</h3>
+            <p style="font-size: 0.88rem; color: #94A3B8;">Adjust the slider to see how many children your donation will empower.</p>
+
+            <div class="slider-container">
+              <div class="slider-header">
+                <span style="font-weight: 600; color: #CBD5E1; font-size: 0.95rem;">Select Number of Classrooms:</span>
+                <span class="slider-val-badge" id="classCountDisplay">1 Classroom</span>
+              </div>
+              <input type="range" min="1" max="25" value="1" class="calc-range-slider" id="classRangeSlider">
+            </div>
+
+            <!-- Quick Choice Buttons -->
+            <div class="quick-amount-buttons">
+              <button class="qab-btn active" data-classes="1">1 Class</button>
+              <button class="qab-btn" data-classes="5">5 Classes</button>
+              <button class="qab-btn" data-classes="10">10 Classes</button>
+              <button class="qab-btn" data-classes="20">Whole School</button>
+            </div>
+
+            <!-- Calculated Metrics -->
+            <div class="calc-impact-results">
+              <div class="cir-item">
+                <span class="cir-num" id="calcStudentsReachable">35+</span>
+                <span class="cir-label">Children Enriched</span>
+              </div>
+              <div class="cir-item">
+                <span class="cir-num" id="calcKitsDeployable">2 Kits</span>
+                <span class="cir-label">TLM Kits Deployed</span>
+              </div>
+              <div class="cir-item">
+                <span class="cir-num" id="calcTotalContribution">₹15,000</span>
+                <span class="cir-label">Sponsorship Cost</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;" id="btnSubmitDonation">
+              <i class="fa-solid fa-heart"></i> Proceed to Sponsor Classroom
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         12. Corporate & Government Partners Marquee
+         ======================================================================== -->
+    <section class="section-alt" style="padding: 40px 0; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;" id="partners">
+      <div class="container" style="text-align: center; margin-bottom: 24px;">
+        <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.1em;">
+          Trusted by State Governments & CSR Leaders
+        </span>
+      </div>
+
+      <div class="partners-marquee-wrapper">
+        <div class="marquee-track">
+          <div class="partner-logo-item"><i class="fa-solid fa-building-flag"></i> Ministry of Education, Govt of India</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-landmark"></i> NITI Aayog Aspirational Districts</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-handshake-angle"></i> Department of School Education Haryana</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-handshake-angle"></i> Rajasthan Samagra Shiksha Abhiyan</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-ribbon"></i> NIPUN Bharat Mission Partner</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-certificate"></i> GuideStar India Platinum Transparency</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-shield-halved"></i> 80G & 12A Certified NGO</div>
+
+          <!-- Duplicate for seamless scroll -->
+          <div class="partner-logo-item"><i class="fa-solid fa-building-flag"></i> Ministry of Education, Govt of India</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-landmark"></i> NITI Aayog Aspirational Districts</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-handshake-angle"></i> Department of School Education Haryana</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-handshake-angle"></i> Rajasthan Samagra Shiksha Abhiyan</div>
+          <div class="partner-logo-item"><i class="fa-solid fa-ribbon"></i> NIPUN Bharat Mission Partner</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       13. Video Lightbox Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="video-modal-content">
+      <button class="modal-close-btn" aria-label="Close Video Modal"><i class="fa-solid fa-xmark"></i></button>
+      <video id="modalVideoPlayer" controls playsinline>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       14. Donation Success Modal (Simulated)
+       ======================================================================== -->
+  <div class="modal-overlay" id="donationSuccessModal">
+    <div class="donation-modal-box">
+      <button class="modal-close-btn success-modal-close" style="color: #334155; top: 12px; right: 12px;" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-success-icon"><i class="fa-solid fa-check"></i></div>
+      <h3 style="font-size: 1.4rem; color: var(--dark); margin-bottom: 8px;">Thank You for Supporting Education!</h3>
+      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 24px; line-height: 1.6;">
+        Your commitment to sponsoring rural primary smart classrooms helps children learn with joy and foundational mastery. You will receive an instant 80G tax receipt and school allocation report on your email.
+      </p>
+      <button class="btn btn-primary success-modal-close" style="width: 100%;">Close Window</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       15. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="logo-icon-box"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #FFFFFF;">Children & Education</span>
+              <span class="brand-subtitle">Foundation India</span>
+            </div>
+          </div>
+          <p>
+            An innovative, tech-enabled non-profit dedicated to uplifting foundational literacy and numeracy across 1,25,000+ government primary schools in rural India through frugal innovations.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Innovations -->
+        <div class="footer-col">
+          <h4>Our Innovations</h4>
+          <div class="footer-links">
+            <a href="#innovations">Smart Classroom TV</a>
+            <a href="#innovations">Audio Box & Mascot</a>
+            <a href="#innovations">3D STEM & Math Kits</a>
+            <a href="#innovations">Teacher Mobile App</a>
+            <a href="#pedagogy">Sahi Kram Pedagogy</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="footer-col">
+          <h4>Impact & About</h4>
+          <div class="footer-links">
+            <a href="#about">About the Foundation</a>
+            <a href="#reach">State Outreach Map</a>
+            <a href="#outcomes">Data & Assessments</a>
+            <a href="#stories">Stories of Change</a>
+            <a href="#calculator">Sponsor a Classroom</a>
+            <a href="#partners">Govt MoUs & CSR</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter & Legal -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 12px;">Subscribe for our quarterly impact & learning outcome reports.</p>
+          <form class="footer-newsletter-box" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our newsletter!');">
+            <input type="email" placeholder="Enter your email" required class="footer-input">
+            <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div style="margin-top: 20px; font-size: 0.8rem; color: #64748B;">
+            <i class="fa-solid fa-shield-halved" style="color: #34D399;"></i> Regd. under Section 12A, 80G & FCRA compliant.
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Children & Education Foundation. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: #64748B;">Privacy Policy</a>
+          <a href="#" style="color: #64748B;">Terms of Use</a>
+          <a href="#" style="color: #64748B;">80G Certification</a>
+          <a href="#" style="color: #64748B;">FCRA Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       External Scripts & Dependencies
+       ======================================================================== -->
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Three.js 3D Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Swiper.js Slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Leaflet.js Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/map-chart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
