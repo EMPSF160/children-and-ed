@@ -198,8 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
           legend: {
             position: 'top',
             labels: {
-              boxWidth: 14,
-              font: { family: "'Plus Jakarta Sans', sans-serif", weight: '600' },
+              boxWidth: 10,
+              padding: 10,
+              font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '600' },
               color: '#334155'
             }
           },
@@ -217,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
             max: 100,
             ticks: {
               callback: value => value + '%',
-              color: '#64748B'
+              color: '#64748B',
+              font: { size: 10 }
             },
             grid: {
               color: '#F1F5F9'
@@ -225,7 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           x: {
             grid: { display: false },
-            ticks: { color: '#334155', font: { weight: '600' } }
+            ticks: {
+              color: '#334155',
+              font: { size: 10, weight: '600' },
+              maxRotation: 45,
+              minRotation: 0,
+              autoSkip: false
+            }
           }
         }
       }
@@ -263,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Chart(trajectoryCtx, {
       type: 'line',
       data: {
-        labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026 (Target)'],
+        labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
         datasets: [
           {
             label: 'Children Enrolled (Lakhs)',
@@ -273,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tension: 0.4,
             fill: true,
             pointBackgroundColor: '#FF6B00',
-            pointRadius: 5
+            pointRadius: 4
           },
           {
             label: 'Schools Equipped (Thousands)',
@@ -283,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tension: 0.4,
             fill: true,
             pointBackgroundColor: '#0F52BA',
-            pointRadius: 5
+            pointRadius: 4
           }
         ]
       },
@@ -294,8 +302,9 @@ document.addEventListener('DOMContentLoaded', () => {
           legend: {
             position: 'top',
             labels: {
-              boxWidth: 14,
-              font: { family: "'Plus Jakarta Sans', sans-serif", weight: '600' },
+              boxWidth: 10,
+              padding: 10,
+              font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '600' },
               color: '#334155'
             }
           }
@@ -304,11 +313,14 @@ document.addEventListener('DOMContentLoaded', () => {
           y: {
             beginAtZero: true,
             grid: { color: '#F1F5F9' },
-            ticks: { color: '#64748B' }
+            ticks: { color: '#64748B', font: { size: 10 } }
           },
           x: {
             grid: { display: false },
-            ticks: { color: '#334155', font: { weight: '600' } }
+            ticks: {
+              color: '#334155',
+              font: { size: 10, weight: '600' }
+            }
           }
         }
       }

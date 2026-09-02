@@ -1804,13 +1804,17 @@ h1, h2, h3, h4, h5, h6 {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: clamp(16px, 3.5vw, 28px);
   box-shadow: var(--shadow-md);
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .chart-header {
@@ -1818,10 +1822,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   gap: 12px;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .chart-toggle-group {
@@ -1852,9 +1857,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .chart-canvas-box {
   position: relative;
-  height: 290px;
+  height: 280px;
   width: 100%;
+  max-width: 100%;
   margin-top: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.chart-canvas-box canvas {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* ==========================================================================
