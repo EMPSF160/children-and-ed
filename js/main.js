@@ -40,13 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Header Sticky & Scroll Effect
   // --------------------------------------------------------------------------
   const headerWrapper = document.querySelector('.header-wrapper');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+  const updateHeaderScroll = () => {
+    if (window.scrollY > 40) {
       headerWrapper?.classList.add('scrolled');
     } else {
       headerWrapper?.classList.remove('scrolled');
     }
-  });
+  };
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  if (lenis) {
+    lenis.on('scroll', updateHeaderScroll);
+  }
+  updateHeaderScroll();
 
   // Mobile Menu Drawer Handler (<= 1024px)
   const mobileToggleBtn = document.getElementById('mobileToggleBtn');

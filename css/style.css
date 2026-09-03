@@ -78,9 +78,9 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden !important;
+  overflow-x: clip;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 body {
@@ -88,9 +88,9 @@ body {
   color: var(--dark-surface-2);
   background-color: var(--light-bg);
   line-height: 1.6;
-  overflow-x: hidden !important;
+  overflow-x: clip;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   position: relative;
 }
 
@@ -2523,22 +2523,31 @@ h1, h2, h3, h4, h5, h6 {
 
   /* 360 Sandbox Stacking with 16:9 uncropped aspect ratio */
   .sandbox-showcase-card {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
   }
-  .sandbox-panel {
-    grid-template-columns: 1fr;
+  .sandbox-panel, .sandbox-panel.active {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
   }
   .sandbox-content-col {
     padding: 36px 28px;
     text-align: center;
     align-items: center;
+    width: 100%;
+    order: 1;
   }
   .sandbox-visual-col {
+    width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
-    min-height: auto;
-    border-radius: 16px;
+    min-height: 240px;
+    border-radius: 0 0 16px 16px;
     overflow: hidden;
+    order: 2;
   }
 
   /* State Partners */
@@ -2602,7 +2611,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* --- 576px (Large Mobile) --- */
+/* --- 576px (Large Mobile & 360 Mobile View) --- */
 @media (max-width: 576px) {
   :root {
     --section-padding-y: 50px;
@@ -2668,21 +2677,103 @@ h1, h2, h3, h4, h5, h6 {
     aspect-ratio: 16 / 9;
   }
 
-  .sandbox-content-col {
-    padding: 24px 18px;
-    text-align: center;
-    align-items: center;
-  }
-  .sandbox-visual-col {
-    aspect-ratio: 16 / 9;
-  }
-  .sandbox-features-list {
-    grid-template-columns: 1fr;
-    max-width: 100%;
+  /* 360 Smart Shala Experience Mobile Layout */
+  .sandbox-tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 24px;
   }
   .sandbox-tab-btn {
-    padding: 10px 16px;
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    gap: 6px;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--radius-md);
+  }
+  .sandbox-tab-btn i {
+    font-size: 0.95rem;
+  }
+  .sandbox-showcase-card {
+    border-radius: 16px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .sandbox-content-col {
+    padding: 24px 16px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .sandbox-step-tag {
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+  }
+  .sandbox-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .sandbox-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    max-width: 100%;
+  }
+  .sandbox-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .sandbox-feature-bullet {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
     font-size: 0.82rem;
+    font-weight: 600;
+    text-align: left;
+    color: #1E293B;
+    line-height: 1.4;
+  }
+  .sandbox-feature-bullet i {
+    font-size: 0.9rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .sandbox-content-col .btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.88rem;
+  }
+  .sandbox-visual-col {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    max-height: 250px;
+    border-radius: 0 0 16px 16px;
+  }
+  .sandbox-floating-metric {
+    bottom: 10px;
+    width: calc(100% - 24px);
+    max-width: 250px;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  .sandbox-floating-metric strong {
+    font-size: 0.95rem;
+  }
+  .sandbox-floating-metric span {
+    font-size: 0.65rem;
   }
 
   .quick-amount-buttons {
@@ -2758,7 +2849,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* --- 425px, 375px, 320px (Compact & Small Mobile) --- */
+/* --- 425px, 375px, 360px, 320px (Compact & Small Mobile) --- */
 @media (max-width: 425px) {
   .hero-tag {
     font-size: 0.76rem;
@@ -2771,6 +2862,34 @@ h1, h2, h3, h4, h5, h6 {
   .state-emblem-badge {
     width: 44px;
     height: 44px;
+  }
+
+  .sandbox-tab-btn {
+    font-size: 0.74rem;
+    padding: 8px 4px;
+    gap: 4px;
+  }
+  .sandbox-tab-btn i {
+    font-size: 0.85rem;
+  }
+  .sandbox-title {
+    font-size: 1.2rem;
+  }
+  .sandbox-desc {
+    font-size: 0.82rem;
+  }
+  .sandbox-content-col {
+    padding: 20px 12px;
+  }
+  .sandbox-floating-metric {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .sandbox-floating-metric strong {
+    font-size: 0.88rem;
+  }
+  .sandbox-floating-metric span {
+    font-size: 0.62rem;
   }
 
   .chart-canvas-box {
